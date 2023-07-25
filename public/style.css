@@ -1,0 +1,216 @@
+/* Die bisher angegebenen Eigenschaften der einzelnen Elmente (klassen) 
+sind nur für die position der Elemente auf der Website verantwortlich. 
+Ändert diese Eigenschaften also vorerst nicht. */
+
+/* globale Standart Einstellungen für Websites. Bitte nicht ändern!!! */
+* {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+
+
+}
+
+/* Hier kannst du die Hintergrundfarbe verändern und Änderungen einbinden, die die gesamte App betreffen */
+body {
+      font-family: "Roboto", sans-serif; /* Schriftart */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+
+
+}
+
+/* Hat in unserem Code die gleiche Aufgabe wie body. 
+Du kannst also im .app oder body (oben) alle Elemente stylen, die sich in der App befinden.*/
+.app {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+
+
+}
+
+/* Hier brauchst du nichts ändern! */
+.app > .screen{
+      display: none;
+
+
+}
+
+/* Hier brauchst du nichts ändern! */
+.app > .screen.active {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+
+}
+
+/* Styling aller Elemnte im Join Screen.*/
+.screen .form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 94%;
+      max-width: 94%;
+
+
+}
+
+
+/* Das folgende Element stylet die Elmente app, screen und form-input im Join Screen. */
+/* Allerdings nur, wenn der Bildschrim maximal eine breite von 600px hat. Dies gilt normalerweise für
+Smartphones. Man könnte also auch sagen das folgende Element stylt die Smartphone Ansicht. */
+@media (max-width: 600px) {
+      /* Die gesamte App (Alles was sich zwischen dem <app> und </app> befindet. */
+      .app {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-width: 100%;
+      border: none;
+
+
+      }
+
+    
+/* Spitzname Eingabefeld alle Elemente mit der Klasse Screen (join-screen und chat-screen) */
+.screen .form-input {
+      width: 100%;
+      margin: 20px 0px;
+
+
+}
+
+}
+
+/* Überschrift im Join Screen ("LWG Chat beitreten")*/
+.screen h2 {
+      margin-bottom: 40px;
+      display: inline-block;
+
+
+}
+
+/* "Spitzname" Beschreibung, was man in das input Feld im Join Screen eingeben soll => "Spitzname" - Element*/
+.screen .form-input label {
+      display: block;
+
+
+}
+
+/* Join Screen Input Feld für Spitzname */
+.screen .form-input input {
+      width: 100%;
+
+
+}
+
+/* Beitreten-Button im Join Screen */
+.screen .form-input button {
+      cursor: pointer;
+      outline: none;
+
+
+}
+
+
+/* Der BEreich in dem sich der Verlassen button und die Überschrift des Chat Screens befinden. */
+.chat-screen .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+}
+
+/* Überschrift "LWG Chat" im Chat Screen*/
+.logo {
+
+
+}
+
+
+/* Der Screen in dem die Nachrichten erscheinen (ChatScreen Mitte) */
+.chat-screen .messages {
+      width: 100%;
+      height: calc(100% - 100px);
+      overflow: auto;
+
+
+}
+
+/* Der Bereich in dem sich das Input Feld für Nachrichten und der abschicken Button befindet. */
+.chat-screen .typebox {
+      width: 100%;
+      display: flex;
+
+
+}
+
+/* Input Feld für ANchrichten im Chat Screen */
+.chat-screen .typebox input {
+      flex: 1;
+
+
+}
+
+/* abschicken Button im Chat Screen */
+.chat-screen .typebox button {
+      width: 100px;
+      height: 100%;
+      outline: none;
+      cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styling der Nachrichten in der Cchat App (Wird später gebraucht) */
+/* HIER NOCH NICHTS VERÄNDERN !!*/
+.chat-screen .messages {
+      width: 100%;
+      height: calc(100% - 100px);
+      overflow: auto;
+}
+
+.chat-screen .messages .message {
+      display: flex;
+}
+
+.chat-screen .messages .message > div {
+      max-width: 80%;
+}
+
+.chat-screen .messages .message.my-message {
+      justify-content: flex-end;
+}
+
+.chat-screen .messages .message.other-message {
+      justify-content: flex-start;
+}
+
+.chat-screen .messages .message .name {
+}
+
+.chat-screen .messages .message .text {
+      word-wrap: break-word;
+}
+
+.chat-screen .messages .update {
+      text-align: center;
+      font-style: italic;     
+}
